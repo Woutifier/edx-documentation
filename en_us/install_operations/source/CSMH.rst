@@ -104,4 +104,11 @@ After the data migration is complete, you have several options.
 
 .. how to info to come
 
+
+**************************
+
+
+[ ] feature flag controls when the new table is required, when enabled, starts the migration DO need to set up new db table
+[ ] how to migrate to the new database configuration
+
 .. include:: ../../links/links.rst
