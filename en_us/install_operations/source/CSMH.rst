@@ -102,13 +102,122 @@ After the data migration is complete, you have several options.
   from both tables. Due to the overhead of doing lookups in two databases, this
   option is only suitable for development environments with small databases.
 
-.. how to info to come
+**************************************************************
+Create the ``courseware_studentmodulehistoryextended`` Table
+**************************************************************
+
+#. Create a database named ``student_module_history``.
+
+#. Define new databases hash.
+
+   .. code-block:: bash
+
+       edxapp_databases:
+
+       EDXAPP_MYSQL_CSMH_DB_NAME: "{{ EDXAPP_MYSQL_DB_NAME }}"
+       EDXAPP_MYSQL_CSMH_USER: "{{ EDXAPP_MYSQL_USER }}"
+       EDXAPP_MYSQL_CSMH_PASSWORD: "{{ EDXAPP_MYSQL_PASSWORD }}"
+       EDXAPP_MYSQL_CSMH_HOST: "{{ EDXAPP_MYSQL_DB_HOST }}"
+       EDXAPP_MYSQL_CSMH_PORT: "{{ EDXAPP_MYSQL_PORT }}"
+
+.. not sure I got this right.
+
+#. Sign in to the Django administration console for your base URL. For example,
+   ``http://{your_URL}/admin``.
+
+#. In the **TBD** section, next to **DATABASES** select **Add**.
+
+#. In the **TBD** field, enter "student_module_history".
+
+  .. with or without the quotes?
+
+#. Use South migrations to create the
+   ``courseware_studentmodulehistoryextended`` table in the
+   ``student_module_history`` database.
+
+   .. didn't we get rid of South migrations in the Django framework upgrade?
+
+#. Installations that have a large number of records, such as the edx.org site,
+   can optionally drop all of the tables created in the
+   ``student_module_history`` database with the exception of the new
+   ``courseware_studentmodulehistoryextended`` table.
+
+*****************
+Migrate Data
+*****************
+
+#. Set ``ENABLE_CSMH_EXTENDED: true``
+
+   .. where?
+
+#. Save the file.
+
+   The migration script begins to copy records from the original table in the
+   default database and insert them into the new
+   ``courseware_studentmodulehistoryextended`` table in the
+   ``student_module_history`` database.
+
+#.
 
 
-**************************
+   .. code-block:: bash
+
+      mysqldump --skip-add-drop-table --no-create-info -u migrate -p -h rdshost.us-east-1.rds.amazonaws.com wwc courseware_studentmodulehistory --where='id > LAST_ID' --result-file=catchup.sql
 
 
-[ ] feature flag controls when the new table is required, when enabled, starts the migration DO need to set up new db table
-[ ] how to migrate to the new database configuration
+
+   .. code-block:: bash
+
+     MINID=2460000
+     MAXID=1003426362
+     STEP=10000
+     MIGRATE_USER=migrate
+     PASSWORD='migrate-password-from-settings'
+     HOST='loadtest-edx-csmh.ciqreuddjk02.us-east-1.rds.amazonaws.com'
+
+
+     for ((i=$MINID-1; i<=$MAXID; i+=$STEP)); do
+     echo -n "$i";
+     mysql -u $MIGRATE_USER -p$PASSWORD -h $HOST wwc <<EOF
+     INSERT INTO wwc.coursewarehistoryextended_studentmodulehistoryextended (id, version, created, state, grade, max_grade, student_module_id)
+       SELECT id, version, created, state, grade, max_grade, student_module_id
+       FROM wwc.courseware_studentmodulehistory
+       WHERE id BETWEEN $i AND $(($i+$STEP-1));
+     EOF
+     echo '.';
+     sleep 2;
+     done
+
+
+  .. code-block:: bash
+
+    MAXID=
+    STEP=20000
+    MIGRATE_USER=
+    PASSWORD=
+    HOST=
+
+
+    for ((i=0; i<=$MAXID; i+=$STEP)); do
+    mysql -u $MIGRATE_USER -p$PASSWORD -h $HOST wwc <<EOF
+    INSERT INTO edxapp_csmh.coursewarehistoryextended_studentmodulehistoryextended (id, version, created, state, grade, max_grade, student_module_id)
+      SELECT id, version, created, state, grade, max_grade, student_module_id
+      FROM wwc.courseware_studentmodulehistory
+      WHERE id BETWEEN $i AND $(($i+$STEP-1));
+    EOF
+    sleep 2
+    done
+
+
+#. If you need to restart, use the following command to find the largest ID value that was successfully inserted.
+
+   .. code-block:: bash
+
+     select max(id) from wwc.courseware_studentmodulehistory where id < MAXID
+
+  Then re-run with i > 0.
+
+  This gets you the largest id that successfully inserted if you need to restart
+
 
 .. include:: ../../links/links.rst
