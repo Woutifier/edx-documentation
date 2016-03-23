@@ -19,9 +19,11 @@ drag and drop problems in your course.
     development. For more information about the previous, deprecated drag and
     drop problem type, see :ref:`Drag and Drop`.
 
-*********************************
-Overview
-*********************************
+.. _overview_of_drag_and_drop_problems:
+
+**********************************
+Overview of Drag and Drop Problems
+**********************************
 
 A drag and drop problem includes a background image and one or more draggable
 images that learners move into target zones on the background image. You can
@@ -37,7 +39,7 @@ to a target, and release the mouse pointer to drop the item on the target. The
 drag and drop problem type supports mobile device interfaces. If a learner
 requires or prefers a keyboard interface, the drag and drop problem type
 supports selecting items and their matching target zones with standard keyboard
-navigation keys.
+navigation keys for a web browser.
 
 Learners will receive full credit for a drag and drop problem when all items
 that have matching zones have been dragged to those zones. Drag and drop
@@ -81,34 +83,91 @@ message informs the learner that the problem is complete.
 Understanding Background Images
 ===============================
 
-The background image for a drag and drop problem is the surface that learners drag items onto.
+The background image for a drag and drop problem is the surface that learners
+drag items onto.
 
 A target zone is a rectangular area on the background image. You can display or
 hide the borders of a zone for learners. You can add labels for zones or leave
 them unlabeled.
 
+A background image must fit within the course screen and the LMS will scale
+images that are too wide. If you choose a background image that is extremely
+large, you should consider how it will appear to learners after scaling. The
+width of the course screen depends on the device and browsing software that a
+learner uses.
+
+You define target zones by specifying their width, height, horizontal offset
+(``x``), and vertical offset (``y``). Each specification is in pixels. The
+horizontal offset is the distance between the left side of the background image
+and the left side of the target zone. The vertical offset is the distance
+between the top of the background image and the top of the target zone.
+
+The following image shows a background image and target zones in the drag and
+drop problem editing dialog box. For information about editing drag and drop
+problems, see :ref:`creating_a_drag_and_drop_problem`.
+
+.. image:: ../../../shared/images/dnd-zone-borders.png
+  :width: 600
+  :alt: A background image and target zones shown in the drag and drop problem
+      editing dialog box.
+
 ==============================
 Understanding Draggable Items
 ==============================
 
-A draggable item is a rectangle that contains either a label or an image. Learners will grab droppable items from the top of a drag and drop problem and drag them to targets on the background image.
+A draggable item is a rectangle that contains either a label or an image.
+Learners will grab droppable items from the top of a drag and drop problem and
+drag them to targets on the background image.
 
 The size of the rectangle depends on the amount or text in the label or the
 size of the image. You can set the background color and the label text color
 for the items in a problem.
 
-Each draggable item can match one target zone on the background image. Draggable items
+Each draggable item can match one target zone on the background image. A
+draggable item can match none of the target zones.
+
+Each item must have a text label to identify it in the drag and drop problem.
+If you include only a text label, that label appears in the draggable item. If
+you include both a text label and an image for an item, the image appears as
+its label.
+
+The following image shows draggable items with image labels. For examples of
+items with text labels, see :ref:`overview_of_drag_and_drop_problems`.
+
+.. image:: ../../../shared/images/dnd-draggable-item-images.png
+  :width: 400
+  :alt: Draggable items with image labels in the item area of a drag and drop
+      problem.
+
+Image labels for draggable items have alternate image descriptions. The
+alternate description explains the image content in text. If a learner cannot
+access the visual image content, the text description helps that learner to
+complete the problem.
+
+.. note::
+    If an image file is unavailable, or cannot be displayed, the LMS will
+    display the text description as the button label.
+
+.. _enabling_drag_and_drop_problem:
 
 *********************************
 Enabling Drag and Drop Problems
 *********************************
 
-
+.. _creating_a_drag_and_drop_problem:
 
 *********************************
 Creating a Drag and Drop Problem
 *********************************
 
 To create a drag and drop problem, you
+
+.. _changing_visual_style_of_drag_and_drop_problem:
+
+****************************************************
+Changing the Visual Style of a Drag and Drop Problem
+****************************************************
+
+You can change the visual appearance of drag and drop problems in your courses. You can change the appearance of the draggable items in an individual problem or
 
 
