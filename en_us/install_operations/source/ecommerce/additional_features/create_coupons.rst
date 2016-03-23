@@ -47,8 +47,9 @@ You create coupon codes by using the coupon administration tool.
      for. The course ID is <how does the user know the course ID?>.
    * **Code Type**: Select either **Discount Code** or **Enrollment Code**. For
      more information, see :ref:`Create Coupons`.
-   * **Seat Type**: <I've never seen anything in this field, but it's required
-     - ? Where do the options come from?>
+   * **Seat Type**: The type of "seat" in the course. For example, this may be
+     "verified" or "professional". The options for this field appear after you
+     enter a valid value in the **Course ID** field.
    * **Category**: Suggested categories for your coupon code. These categories
      can help you keep track of your codes.
    * **Valid from** and **Valid until**: The dates and times when you want to
