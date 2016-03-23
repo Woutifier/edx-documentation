@@ -522,6 +522,8 @@ The answer tag format encloses the Python script in an ``<answer>`` tag,
 instead of using a Python function with a ``<script>`` tag, as in the following
 example.
 
+.. note:: The ``answer`` tag must inside the ``customresponse`` tag.
+
 .. code-block:: xml
 
   <answer>
@@ -565,7 +567,8 @@ Create a Custom Python-Evaluated Input Problem in Answer Tag Format
 ========================================================================
 
 #. In the component editor, modify the example as to use  the``<answer>`` tag
-   instead of ``<script>``. You can copy the sample code below.
+   instead of ``<script>``. Make sure the ``<answer>`` tag is inside the
+   ``<customresponse>`` tag. You can copy the example code below.
 
 #. Select **Save**.
 
@@ -573,11 +576,11 @@ Create a Custom Python-Evaluated Input Problem in Answer Tag Format
 .. code-block:: xml
 
     <problem>
+
         <p>What is the sum of 2 and 3?</p>
 
         <customresponse expect="5">
         <textline math="1" />
-        </customresponse>
 
         <answer>
     if answers[0] == expect:
@@ -588,6 +591,9 @@ Create a Custom Python-Evaluated Input Problem in Answer Tag Format
         messages[0] = 'This answer is incorrect'
         overall_message = 'Please try again'
         </answer>
+
+        </customresponse>
+
     </problem>
 
 .. important::
