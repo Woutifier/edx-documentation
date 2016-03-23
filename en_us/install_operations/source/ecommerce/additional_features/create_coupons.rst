@@ -20,16 +20,12 @@ Both discount codes and enrollment codes can be used in the following ways.
 * Multiple times by multiple users.
 
 When you create a coupon code, the E-Commerce service generates an order. The
-Invoice Payment Processor module manages these orders and assumes out-of-band
+Invoice Payment Processor module records these orders and assumes out-of-band
 payment for the coupon codes.
 
-The Invoice Payment Modules records the transaction in the Invoice table for
-later reconciliation.
+The Invoice Oayment Processor module records the transaction in the Invoice
+table for later reconciliation.
 
-.. Would it be correct to say "The Invoice Payment module records the
-.. transaction in the Invoice table for later reconciliation." OR "The Invoice
-.. Payment Processor module records the transaction in the Invoice table for
-.. later reconciliation."?
 
 ****************************
 Create Coupon Codes
@@ -46,7 +42,7 @@ You create coupon codes by using the coupon administration tool.
      you can only change the **Valid from** and **Valid until** dates.
 
    * **Name**: The name you want to give the coupon, such as "Holiday 2015 15%
-     Promotion".
+     Promotion". The name must have fewer than 255 characters.
    * **Course ID**: The ID of the course that you want to provide the coupon
      for. The course ID is <how does the user know the course ID?>.
    * **Code Type**: Select either **Discount Code** or **Enrollment Code**. For
@@ -75,10 +71,18 @@ You create coupon codes by using the coupon administration tool.
      each person receives one code.
    * **Code**: This field is visible if you select **Can be used once by
      multiple customers** or **Can be used multiple times by multiple
-     customers**. This value specifies the code that recipients enter to redeem
-     the coupon code. <You can enter alphanumeric characters as well as
-     underscores.> For example, you can enter ``HOLIDAY_15``. If you leave this
-     field empty, the system generates a code for you.
+     customers**.
+
+     * If you select **Can be used once by multiple customers**, leave this
+       field empty. The system generates the code for you when you select
+       **Create Coupon**.
+
+     * If you select **Can be used multiple times by multiple customers**, you
+       can either enter a value in this field or leave it empty.  <You can
+       enter alphanumeric characters as well as underscores.> For example, you
+       can enter ``HOLIDAY_15``. If you leave this field empty, the system
+       generates a code for you.
+
    * **Client**: The name of the organization that you create the codes for.
      This organization receives an invoice for the codes you create.
    * **Total Paid**: The cost of the course.
@@ -114,6 +118,7 @@ You edit coupon codes by using the coupon administration tool.
    you want.
 #. Select **Save Changes**.
 
+.. _Download Coupon Code Information:
 
 ***********************************
 Download Coupon Code Information
@@ -135,26 +140,42 @@ the coupon code. If your coupon code includes multiple individual codes, the
 
 
 *************************************
-Allow Users to Redeem Coupon Codes
+Allow Learners to Redeem Coupon Codes
 *************************************
 
-You can provide two ways for learners to redeem coupon codes.
+After you create coupon codes, you can download a .csv file that includes all
+the individual coupon codes and URLs where the learner can redeem each code.
+The E-Commerce service provides two ways for learners to use these URLs to
+redeem coupon codes.
 
-.. I wasn't sure what to do with the URLs; please correct as necessary. What
-.. else does the user have to do to create an offer landing page or redeem
-.. endpoint?
+.. note::
+  If the coupon code is a discount code, and the learner has a balance due
+  after the learner arrives at the offer landing page or the redeem endpoint,
+  the checkout page opens after the learner applies the discount code.
 
-* Create an offer landing page.
+* The offer landing page.
 
-  An offer landing page presents the offer to the learner and allows the leaner
-  to apply the code. The page does not require registration or sign-in. The
-  offer landing page provides context and confirms that entering the coupon
-  code will enroll the learner in the course.
+  The offer landing page presents the offer to the learner and allows the
+  leaner to apply the code. The page does not require registration or sign-in.
+  The offer landing page confirms that entering the coupon code enrolls the
+  learner in the course.
 
-  To create the landing page, go to
-  ``http://localhost:8002/coupons/offer/?code=``.
+  To direct learners to the offer landing page, send them a URL for the coupon
+  code that uses the following format.
 
-* Create a redeem endpoint.
+  ``http://localhost:8002/coupons/offer/?code=<code number>``
+
+  For example, an offer landing page URL might resemble the following example.
+
+  ``http://localhost:8002/coupons/offer/?code=ZDPC3AQV3732RQT5``
+
+  .. note::
+   In the .csv file, all URLs are formatted as
+   ``http://localhost:8002/coupons/redeem/?code=<code number>``. To direct the
+   learner to a URL that includes an offer landing page, change ``redeem`` in
+   the URL to ``offer``.
+
+* A redeem endpoint.
 
   The redeem endpoint adds the course that is associated with the coupon code
   to the learner's basket, applies the coupon code, and completes the order and
@@ -162,5 +183,11 @@ You can provide two ways for learners to redeem coupon codes.
   order is complete, the learner's dashboard opens, and the course the learner
   just enrolled in is visible.
 
-  To create the redeem endpoint, go to
-  ``http://localhost:8002/coupons/redeem/?code=``.
+  To direct learners to the redeem endpoint, send them a URL for the coupon
+  code that uses the following format.
+
+  ``http://localhost:8002/coupons/redeem/?code=<code number>``
+
+  For example, a redeem endpoint URL might resemble the following example.
+
+  ``http://localhost:8002/coupons/redeem/?code=ZDPC3AQV3732RQT5``
