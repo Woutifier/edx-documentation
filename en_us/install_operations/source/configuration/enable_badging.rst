@@ -21,8 +21,8 @@ Overview
 *********
 
 Badges provide a way for learners to share their course achievements. For
-courses that have course completion badges enabled, learners receive a badge
-at the same time as they receive a course certificate, and have the option of
+courses that have course completion badges enabled, learners receive a badge at
+the same time that they receive a course certificate, and have the option of
 sharing their badges to a badging site such as Mozilla Backpack. For more
 information, see :ref:`Course Completion Badges`.
 
@@ -312,7 +312,7 @@ the following events occur.
 * A learner receives a completion certificate for every course in a specified
   list of courses.
 
-These course event badges can be customized with your parameters and badge
+You can customize these course event badges with your parameters and badge
 images. For information, see :ref:`Create Course Event Badges`.
 
 
@@ -480,8 +480,8 @@ these steps.
      followed by a comma and then the slug of the badge class to associate
      with this badge.
 
-     For example, to configure a badge that is awarded when a learner enrolls
-     in 5 courses, you would add this definition.
+     For example, to configure a badge that is awarded when a learner enrolls in
+     5 courses, you add this definition.
 
      ``5,enrolled_five``
 
@@ -504,7 +504,7 @@ these steps.
 
 #. When you have finished defining badges in the configuration, select **Save**.
 
-#. To activate this configuration, select **Enabled** at the top left of the
+#. To activate this configuration, select **Enabled** at the top of the
    configuration page.
 
 .. important:: You can create more than one course event badge configuration,
