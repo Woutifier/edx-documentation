@@ -154,6 +154,29 @@ complete the problem.
 Enabling Drag and Drop Problems
 *********************************
 
+Before you can add drag and drop problems, you must enable the drag and drop problem type for your course.
+
+To enable the drag and drop problem type, add the ``"drag-and-drop-v2"`` module
+to the **Advanced Module List** on the **Advanced Settings** page. For more
+information, see :ref:`Enable Additional Exercises and Tools`.
+
+The following example shows the ``drag-and-drop-v2`` in the **Advanced Module List**.
+
+.. code-block:: json
+
+    [
+        "drag-and-drop-v2"
+    ]
+
+After you enable the ``drag-and-drop-v2`` problem type, **Drag and Drop** appears in the **Advanced** menu of the **Add New Component** screen.
+
+.. note::
+    By default, your course includes a **Drag and Drop** problem type in the
+    **Problem > Advanced** menu of the **Add New Component** screen. This is an
+    older drag and drop problem type that has been replaced by the ``drag-and-
+    drop-v2`` advanced module in the **Advanced** menu of the **Add New
+    Component** screen.
+
 .. _creating_a_drag_and_drop_problem:
 
 *********************************
