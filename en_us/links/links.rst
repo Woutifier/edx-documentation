@@ -341,6 +341,8 @@
 
 .. _Office Mix Knowledge Base: https://officemix.uservoice.com/knowledgebase
 
+.. _W3C CSS color specification: https://www.w3.org/TR/css3-color/
+
 
 
 .. Release Notes
