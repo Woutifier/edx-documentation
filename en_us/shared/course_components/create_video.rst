@@ -25,11 +25,15 @@ effective for a number of purposes, such as presenting motivating
 material, showing experiments, and reducing cognitive load for complex
 content.
 
+For more information about how learners can interact with course videos, see
+:ref:`learners:Video Player` in the *EdX Learner's Guide* or
+:ref:`openlearners:Video Player` in the *Open edX Learner's Guide*.
+
 =====================
 When to Use a Video
 =====================
 
-Before creating video content, figure out whether video is the best medium by
+Before creating video content, decide whether video is the best medium by
 asking the following questions.
 
 * Should the content be conveyed through text?
@@ -145,16 +149,21 @@ strongly recommends that you use the **.mp4 format**.
 Step 2. Create or Obtain a Video Transcript
 *********************************************
 
-Transcripts are required for your videos. Transcripts are required for deaf or
-hard of hearing learners to understand audio content, and helpful for learners
+Transcripts are required for your videos. Transcripts help learners with
+hearing impairments understand audio content, and they are helpful for learners
 who speak other languages. You can allow learners to download transcripts so
 that they can read them offline. You associate a transcript with a video when
 you create the video component.
 
-Timed transcripts in the SubRip Text (.srt) format are strongly recommended. A
-transcript in the .srt format appears next to its associated video and
-automatically scrolls as the video plays. A learner can select a word in the
+Timed transcripts in the SubRip Text (.srt) format are strongly recommended.
+Learners can select the **Show transcript** (") icon in the video player's
+control bar to show the transcript next to the video. The transcript
+automatically scrolls as the video plays, and learners can select a line in the
 transcript to jump to the point in the video where that word is spoken.
+
+Learners can also choose to show the transcript file as pop-on closed captions
+for the video by selecting the **Closed caption** (CC) icon in the video
+player's control bar.
 
 To create or obtain a transcript in .srt format, you can work with a company
 that provides captioning services.
@@ -379,9 +388,9 @@ The following options appear on the **Advanced** page of the video component.
       - The name that you want your learners to see. This is the same as the
         **Display Name** field on the **Basic** tab.
     * - **Default Timed Transcript**
-      -  The name of the transcript file that was specified in the **Default
-         Timed Transcript** field on the **Basic** page. You do not have to
-         change this setting.
+      - The name of the transcript file that was specified in the **Default
+        Timed Transcript** field on the **Basic** page. You do not have to
+        change this setting.
     * - **Download Transcript Allowed**
       - Specifies whether you want to allow learners to download the timed
         transcript. If you select **True**, a link to download the
@@ -427,7 +436,7 @@ The following options appear on the **Advanced** page of the video component.
           a Course`.
 
     * - **Show Transcript**
-      - Specifies whether the transcript plays along with the video by default.
+      - Specifies whether the transcript appears next to the video by default.
     * - **Transcript Languages**
       - The transcript files for any additional languages. For more
         information, see :ref:`Transcripts in Additional Languages`.
@@ -502,8 +511,8 @@ Add a Video Table of Contents
 
 You can add a table of contents for your video by adding an .srt file that
 contains links to different parts of the video. When your learners view the
-video, they can select **CC** to switch between the main transcript for the
-video and the table of contents.
+video, they can select the video **Language menu** to switch between the main
+transcript for the video and the table of contents.
 
 To add a table of contents, you work with a third-party service to create an
 .srt file. Then, you use the **Transcript Languages** setting in the video
@@ -601,8 +610,8 @@ To add the transcripts to a video component, follow these steps.
 
 #. Repeat steps 2 - 5 for any additional languages.
 
-When your learners view the video, they can select **CC** to select a
-language.
+When your learners view the video, they can select the **Language menu** to
+select a language.
 
 .. image:: ../../../shared/images/Video_LanguageTranscripts_LMS.png
    :alt: Video playing with language options visible.
