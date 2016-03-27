@@ -578,22 +578,24 @@ To add a downloadable transcript, follow these steps.
 Add a Transcript in Another Language
 ============================================================
 
-You can provide transcripts for your video in other languages. To do this,
-you work with a third-party service to obtain an .srt transcript file for
+You can provide transcripts for your video in more than one language. To do
+this, you work with a third-party service to obtain an .srt transcript file for
 each language, and then associate the .srt file with the video in Studio.
 
-Before you add transcript files, make sure that each one has a unique name. If
-you use the same transcript name in more than one video component, the same
-transcript will play for each video. To avoid this problem, you could name
-your foreign language transcript files according to the video's file name and
-the transcript language.
+Before you add a transcript file, make sure that each file has a unique name.
+If you use the same transcript name more than once, only the most recently
+added transcript will appear for every video component that is set up to use a
+transcript with that name.
 
-For example, you have two videos, named video1.mp4 and video2.mp4. Each video
-has a Russian transcript and a Spanish transcript. You can name the
-transcripts for the first video video1_RU.srt and video1_ES.srt, and name the
-transcripts for the second video video2_RU.srt and video2_ES.srt.
+To avoid this problem, a best practice is to name additional transcript files
+by appending the transcript's language to the video file name. For example, you
+have two videos, named video1.mp4 and video2.mp4, and their original
+transcripts are named video1.srt and video2.srt. When you add Spanish
+transcripts for these videos, you name them video1_ES.srt and video2_ES.srt.
+Later, when you add Russian transcripts for the videos, you name them
+video1_RU.srt and video2_RU.srt.
 
-To add the transcripts to a video component, follow these steps.
+To add a transcript to a video component, follow these steps.
 
 #. After you obtain the .srt files for additional languages, open the
    video component for the video.
@@ -603,8 +605,8 @@ To add the transcripts to a video component, follow these steps.
 
 #. Select the language for the transcript that you want to add.
 
-#. Select **Upload**, browse to the .srt file for the language that you want,
-   and then select **Open**.
+#. Select **Upload**, browse to the .srt file for the transcript in that
+   language, and then select **Open**.
 
 #. In the **Upload translation** dialog box, select **Upload**.
 
@@ -614,7 +616,8 @@ When your learners view the video, they can select the **Language menu** to
 select a language.
 
 .. image:: ../../../shared/images/Video_LanguageTranscripts_LMS.png
-   :alt: Video playing with language options visible.
+   :alt: The video player with the language menu selected to show English and
+    Spanish as transcript options
 
 .. _Steps for sjson files:
 
