@@ -503,40 +503,6 @@ collateral to accompany the video.
   :local:
   :depth: 1
 
-.. _Video TOC:
-
-==============================
-Add a Video Table of Contents
-==============================
-
-.. remove this section? Alison 28 Mar 16
-
-You can add a table of contents for your video by adding an .srt file that
-contains links to different parts of the video. When your learners view the
-video, they can select the video **Language menu** to switch between the main
-transcript for the video and the table of contents.
-
-To add a table of contents, you work with a third-party service to create an
-.srt file. Then, you use the **Transcript Languages** setting in the video
-component to associate the .srt file with the video.
-
-.. image:: ../../../shared/images/VideoTOC.png
-   :alt: A video with a transcript that has links to different parts of the
-    video.
-   :width: 500
-
-#. After you obtain the .srt file that will function as the table of contents,
-   open the video component for the video.
-
-#. On the **Advanced** tab, scroll down to **Transcript Languages**, and then
-   select **Add**.
-
-#. Select **Table of Contents**.
-
-#. Select **Upload**, browse to the .srt file, and then select **Open**.
-
-#. In the **Upload translation** dialog box, select **Upload**.
-
 .. _Additional Transcripts:
 
 ============================================================
@@ -623,9 +589,9 @@ select a language.
 
 .. _Steps for sjson files:
 
-==============================
-Steps for .sjson Files
-==============================
+=================================
+Upload a .sjson File (Deprecated)
+=================================
 
 If your course uses .sjson files, you upload the .sjson file for the video
 to the **Files & Uploads** page, and then specify the name of the .sjson file
@@ -642,7 +608,7 @@ in the video component.
    For example, if the name of your video is **Lecture1a**, the name of your
    .sjson file must be **subs_Lecture1a.srt.sjson**.
 
-3. Upload the .sjson file for your video to the **Files & Uploads** page.
+#. Upload the .sjson file for your video to the **Files & Uploads** page.
 #. Edit or create the video component.
 #. Select **Advanced**.
 #. In the **Default Timed Transcript** field, enter the file name of your
