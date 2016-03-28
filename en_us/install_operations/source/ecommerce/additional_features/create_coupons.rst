@@ -148,32 +148,127 @@ the coupon code. If your coupon code includes multiple individual codes, the
 
 
 ***************************************
-Enable Learners to Redeem Coupon Codes
+Distribute Coupon Codes to Learners
 ***************************************
 
-Learners redeem coupon codes in two ways.
+Learners redeem coupon codes in several ways.
 
 * By entering a coupon code on the **Checkout** page for the verified or
-  professional certificate track. In this case, you provide the coupon code for
-  the learner to enter.
+  professional certificate track. In this case, you send the learner an email
+  message that contains the coupon code for the learner to enter. The message
+  might also include the URL for the course About page to make signing up for
+  the course easier.
 
-* By visiting a URL. At this URL, the enrollment code or discount code is
-  applied automatically, and the learner is enrolled in the course if they
-  haven't already enrolled. In this case, you provide the URL for the learner
-  to visit.
+* By accessing a URL for an *offer landing page*. At this URL, an automatically
+  generated page lets the learner know that the coupon code has been applied.
+  If the learner is signed in, the page also lets the learner know that they
+  have been enrolled in the course. If the learner is not signed in or does not
+  have an account, the learner must sign in or create an account to enroll in
+  the course. In this case, you send the learner an email message that contains
+  the URL.
 
-==================================================
-Learners Enter a Coupon Code on the Checkout Page
-==================================================
+  If a learner accesses an offer landing page with an enrollment code, the
+  learner selects **Redeem and Enroll** to redeem the enrollment code and
+  enroll in the course.
+
+  If a learner accesses an offer landing page with a discount code, the learner
+  selects **Checkout** to redeem the enrollment code and go to the **Checkout**
+  page, where they pay the balance due.
+
+* By accessing a URL for a *redeem endpoint*. At this URL, an automatically
+  generated page lets the learner know that the coupon code has been applied,
+  and the learner is enrolled in the course if they have not already enrolled.
+  The learner must be signed in to access the URL and redeem the coupon code.
+  In this case, you send the learner an email message that contains the URL.
+
+.. it would be awesome if we could call this some kind of page, too, to make the relationship clearer. Redeem page? Offer redeemed page?
+
+  If a learner accesses a redeem endpoint with an enrollment code, the
+  enrollment code is applied and the learner is enrolled in the course automatically. The learner's dashboard opens and the course is visible.
+
+  If a learner accesses a redeem endpoint with a discount code, the learner
+  selects **Checkout** or **Checkout with PayPal** to redeem the enrollment
+  code and go to the **Checkout** page, where they pay the balance due.
+
+
+In all three cases, if the coupon code is an enrollment code, the learner's
+dashboard opens and the course is visible when the learner redeems the code. If
+the coupon code is a discount code, and the learner has a balance due after the
+learner applies the discount code, the checkout page opens. After the learner
+pays the balance, the learner's dashboard opens and the course is visible.
+
+
+
+* - Offer Landing Page
+  - Redeem Endpoint
+* - Enrollment code
+
+
+
+
+
+
+To distribute coupon codes to learners, you first determine the coupon code or
+the URL for the learner to use, and then you create and send an email that
+includes the coupon code or the URL.
+
+
+.. contents::
+   :depth: 1
+   :local:
+
+.. _Find a Coupon Code or URL:
+
+===========================
+Find a Coupon Code or URL
+===========================
+
+Both coupon codes and URLs for an individual coupon appear in two places: on
+the page for the coupon, and in a downloadable .csv file.
+
+
+
+
+
+Coupon Code
+***********************
+
+Offer Landing Page
+***********************
+
+Redeem Endpoint
+***********************
+
+
+
+Use the Coupon Page
+***********************
+
+To find a coupon code that the learner will enter on the **Checkout** page, follow these steps.
+
+#. In your browser, go to ``http://localhost:8002/coupons/`` to open the coupon
+   administration tool.
+#. On the **Coupon Codes** page, locate the coupon that you want in the table,
+   and then select the name of the coupon.
+#. On the page for the coupon, locate the table under **Codes**.
+
+, you :ref:`download a .csv file <Download Coupon Code Information>` that lists the codes, as well as
+the URLs where learners can redeem the codes.
 
 When learners enter a coupon code on the **Checkout** page, you provide the learners with the coupon codes that they will enter.
 
+URL to the course About page
 
 
-=======================
-Learners Visit a URL
-=======================
 
+
+
+Find a URL
+************
+
+To find the coupon code or the URL for the learner to use, you :ref:`download a
+.csv file <Download Coupon Code Information>` that lists the codes, as well as
+the URLs where learners can redeem the codes.
 
 You can download a .csv file that includes all of the codes for an individual coupon, as well as the URLs where learners can redeem the codes.
 
@@ -228,7 +323,7 @@ code that uses the following format.
 
 For example, an offer landing page URL might resemble the following example.
 
-``http://localhost:8002/coupons/offer/?code=ZDPC3AQV3732RQT5``
+``http://your_domain_name.com/coupons/offer/?code=ZDPC3AQV3732RQT5``
 
 Redeem Endpoint
 ********************
@@ -254,13 +349,14 @@ For example, a redeem endpoint URL might resemble the following example.
  learner to a URL that includes a redeem endpoint, change ``offer`` in the
  URL to ``redeem``.
 
+.. _Example Email Messages:
 
 ************************
 Example Email Messages
 ************************
 
-
-
+You can use the following email messages as examples of the communication that
+you send to your learners.
 
 
 =======================
@@ -272,7 +368,7 @@ Enter a Coupon Code
  Dear <name>,
 
  You have received a <discount/enrollment> code for <course name>. For more
- information about the course, see <course About page>.
+ information about the course, see <link to course About page>.
 
  To redeem this code, sign up for the <verified/professional> certificate
  track, and then enter the following code in the **Coupon Code** field on the
