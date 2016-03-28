@@ -231,7 +231,7 @@ aspects of your course.
 
 * In courses with randomized content blocks, you see the actual problems that
   was assigned. This view allows you to assess requests to adjust a grade or
-  reset the attempts for a problem, For details about adjusting grades or
+  reset the attempts for a problem. For details about adjusting grades or
   resetting attempts, see :ref:`Adjust_grades`.
 
 * You do not see sections or subsections that have not yet been released.

@@ -553,12 +553,12 @@ each language, and then associate the .srt file with the video in Studio.
 Before you add a transcript file, make sure that each file has a unique name.
 If you use the same transcript name more than once, only the most recently
 added transcript will appear for every video component that is set up to use a
-transcript with that name.
+transcript with that name. To avoid this problem, a best practice is to name
+additional transcript files by appending the transcript's language to the video
+file name.
 
-To avoid this problem, a best practice is to name additional transcript files
-by appending the transcript's language to the video file name. For example, you
-have two videos, named video1.mp4 and video2.mp4, and their original
-transcripts are named video1.srt and video2.srt. When you add Spanish
+For example, you have two videos, named video1.mp4 and video2.mp4, and their
+original transcripts are named video1.srt and video2.srt. When you add Spanish
 transcripts for these videos, you name them video1_ES.srt and video2_ES.srt.
 Later, when you add Russian transcripts for the videos, you name them
 video1_RU.srt and video2_RU.srt.
@@ -589,9 +589,9 @@ select a language.
 
 .. _Steps for sjson files:
 
-=================================
-Upload a .sjson File (Deprecated)
-=================================
+==================================
+Upload an .sjson File (Deprecated)
+==================================
 
 If your course uses .sjson files, you upload the .sjson file for the video
 to the **Files & Uploads** page, and then specify the name of the .sjson file
