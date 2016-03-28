@@ -595,7 +595,7 @@ see :ref:`Strings with JSON` for how to resolve this situation.
 
 In general, the JavaScript code inside a Mako template file should be
 succinct, simply providing a bridge to a JavaScript file. For legacy code with
-more complicated JavaScript code, you should nadditionally follow the best
+more complicated JavaScript code, you should additionally follow the best
 practices documented for :ref:`Safe JavaScript Files`.
 
 
@@ -646,10 +646,10 @@ JavaScript Files
 JavaScript files are often used to perform DOM manipulation, and must properly
 HTML-escape text before inserting it into the DOM.
 
-The `UI Toolkit <https://github.com/edx/edx-ui-toolkit>`_ has introduced
-various ``StringUtils`` and ``HtmlUtils`` that are useful for handling
-escaping in JavaScript. You can declare ``StringUtils`` and ``HtmlUtils`` as
-dependencies using RequireJS ``define``, as seen in the following example.
+The `UI Toolkit <https://github.com/edx/edx-ui-toolkit>`_ introduces various
+``StringUtils`` and ``HtmlUtils`` that are useful for handling escaping in
+JavaScript. You can declare ``StringUtils`` and ``HtmlUtils`` as dependencies
+using RequireJS ``define``, as seen in the following example.
 
 .. code-block:: javascript
 
