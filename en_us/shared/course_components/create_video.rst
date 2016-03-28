@@ -161,9 +161,9 @@ control bar to show the transcript next to the video. The transcript
 automatically scrolls as the video plays, and learners can select a line in the
 transcript to jump to the point in the video where that word is spoken.
 
-Learners can also choose to show the transcript file as pop-on closed captions
-for the video by selecting the **Closed caption** (CC) icon in the video
-player's control bar.
+Learners can also choose to show the transcript file as overlaid closed
+captions for the video by selecting the **Closed caption** (CC) icon in the
+video player's control bar.
 
 To create or obtain a transcript in .srt format, you can work with a company
 that provides captioning services.
@@ -508,6 +508,8 @@ collateral to accompany the video.
 ==============================
 Add a Video Table of Contents
 ==============================
+
+.. remove this section? Alison 28 Mar 16
 
 You can add a table of contents for your video by adding an .srt file that
 contains links to different parts of the video. When your learners view the
