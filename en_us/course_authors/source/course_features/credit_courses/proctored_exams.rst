@@ -357,7 +357,7 @@ To create a practice exam, follow these steps.
 
 #. Select the **Configure** icon for the subsection.
 
-   .. image:: ../../../shared/images/subsections-settings-icon.png
+   .. image:: ../../../../shared/images/subsections-settings-icon.png
     :alt: A subsection in the course outline with the configure icon indicated.
     :width: 600
 
