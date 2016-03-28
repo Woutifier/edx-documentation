@@ -82,6 +82,8 @@
 
 .. _PyEnv: https://github.com/yyuu/pyenv
 
+.. _example CSS file for drag and drop problems: https://github.com/edx-solutions/xblock-drag-and-drop-v2/blob/master/drag_and_drop_v2/public/themes/apros.css
+
 .. _VirtualEnv: http://www.virtualenv.org/en/latest/
 
 .. _Virtual Environments: http://docs.python-guide.org/en/latest/dev/virtualenvs/

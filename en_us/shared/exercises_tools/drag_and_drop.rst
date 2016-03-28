@@ -433,8 +433,17 @@ Changing the Visual Style of a Drag and Drop Problem
 ****************************************************
 
 You can change the visual appearance of drag and drop problems in your courses.
-You can change the appearance of the draggable items in an individual problem
-or
+You can change the colors of the draggable items in an individual problem
+or you can completely customize the appearance of drag and drop problems.
 
+* The **Background color** and **Text color** controls for the draggable items
+  in a drag and drop problem set the appearance of items for an individual
+  problem. You can choose colors for the background and text of items when you
+  create or edit a drag and drop problem.
+
+* You can develop a Python programming language module and include a custom
+  Cascading Style Sheet (CSS) file for drag and drop problems in your Open edX
+  site. For more information, see
+  :ref:`installation:styling_drag_and_drop_problems`.
 
 .. include:: ../../../links/links.rst
