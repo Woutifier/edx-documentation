@@ -153,40 +153,41 @@ Distribute Coupon Codes to Learners
 
 Learners redeem coupon codes in several ways.
 
-* By entering a coupon code on the **Checkout** page for the verified or
-  professional certificate track. In this case, you send the learner an email
-  message that contains the coupon code for the learner to enter. The message
-  might also include the URL for the course About page to make signing up for
-  the course easier.
+* By sending leaners a coupon code that they enter on the **Checkout** page for
+  the verified or professional certificate track. In this case, you send the
+  learner an email message that contains the coupon code for the learner to
+  enter. The message might also include the URL for the course About page to
+  make signing up for the course easier.
 
-* By accessing a URL for an *offer landing page*. At this URL, an automatically
-  generated page lets the learner know that the coupon code has been applied.
-  If the learner is signed in, the page also lets the learner know that they
-  have been enrolled in the course. If the learner is not signed in or does not
-  have an account, the learner must sign in or create an account to enroll in
-  the course. In this case, you send the learner an email message that contains
-  the URL.
+* By sending learners a URL for an *offer landing page*. At this URL, an
+  automatically generated page opens and lets the learner know that the coupon
+  code has been applied. If the learner is signed in, the page also lets the
+  learner know that they have been enrolled in the course. If the learner is
+  not signed in or does not have an account, the learner must sign in or create
+  an account to enroll in the course. In this case, you send the learner an
+  email message that contains the URL.
 
-  If a learner accesses an offer landing page with an enrollment code, the
+  If a learner accesses an offer landing page by using an enrollment code, the
   learner selects **Redeem and Enroll** to redeem the enrollment code and
   enroll in the course.
 
-  If a learner accesses an offer landing page with a discount code, the learner
-  selects **Checkout** to redeem the enrollment code and go to the **Checkout**
-  page, where they pay the balance due.
+  If a learner accesses an offer landing page by using a discount code, the
+  learner selects **Checkout** to redeem the enrollment code and go to the
+  **Checkout** page, where they pay the balance due.
 
-* By accessing a URL for a *redeem endpoint*. At this URL, an automatically
-  generated page lets the learner know that the coupon code has been applied,
-  and the learner is enrolled in the course if they have not already enrolled.
-  The learner must be signed in to access the URL and redeem the coupon code.
-  In this case, you send the learner an email message that contains the URL.
+* By sending learners a URL for a *redeem endpoint*. At this URL, an
+  automatically generated page lets the learner know that the coupon code has
+  been applied, and the learner is enrolled in the course if they have not
+  already enrolled. The learner must be signed in to access the URL and redeem
+  the coupon code. In this case, you send the learner an email message that
+  contains the URL.
 
 .. it would be awesome if we could call this some kind of page, too, to make the relationship clearer. Redeem page? Offer redeemed page?
 
-  If a learner accesses a redeem endpoint with an enrollment code, the
+  If a learner accesses a redeem endpoint by using an enrollment code, the
   enrollment code is applied and the learner is enrolled in the course automatically. The learner's dashboard opens and the course is visible.
 
-  If a learner accesses a redeem endpoint with a discount code, the learner
+  If a learner accesses a redeem endpoint by using a discount code, the learner
   selects **Checkout** or **Checkout with PayPal** to redeem the enrollment
   code and go to the **Checkout** page, where they pay the balance due.
 
