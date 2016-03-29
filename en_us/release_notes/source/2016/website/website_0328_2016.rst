@@ -1,0 +1,7 @@
+
+* The edX website now includes an **All Subjects** page, where learners can see
+  all subjects that edX courses cover as well as the available courses in those
+  subjects. (SWAT-130)
+
+* For instructor biographies, the **Organization** and **Title** fields are now
+  optional. (SWAT-180)
