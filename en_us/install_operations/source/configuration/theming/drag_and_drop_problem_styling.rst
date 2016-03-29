@@ -4,7 +4,17 @@
 Styling Drag and Drop Problems
 ##############################
 
-You can customize the appearance of drag and drop problems in your Open edX site by adding a Python programming language module and a Cascading Style Sheet (CSS) file. The style that you configure applies to all drag and drop problems.
+You can customize the appearance of drag and drop problems in your Open edX
+site by adding a Python programming language module and a Cascading Style Sheet
+(CSS) file. The style that you configure applies to all drag and drop problems
+in all courses. For more information about drag and drop problems, see
+:ref:`opencoursestaff:drag_and_drop_problem`.
+
+.. note::
+    You can also style the background and text colors of the draggable items in
+    an individual drag and drop problem, without configuring a Python module
+    and CSS file. For more information, see
+    :ref:`opencoursestaff:changing_visual_style_of_drag_and_drop_problem`.
 
 To customize the style of drag and drop problems, follow these steps.
 
@@ -48,7 +58,10 @@ To customize the style of drag and drop problems, follow these steps.
                     }
                 }
 
-   Include the name of your Python module in the ``package`` object. Include the path to your CSS style sheet file in the ``locations`` object. The path must be relative to your Python module installation directory. You can include more than one path in the ``locations`` array, separated by commas.
+   Include the name of your Python module in the ``package`` object. Include
+   the path to your CSS style sheet file in the ``locations`` object. The path
+   must be relative to your Python module installation directory. You can
+   include more than one path in the ``locations`` array, separated by commas.
 
 #. Restart the LMS.
 

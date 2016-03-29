@@ -1,8 +1,8 @@
 .. _Drag and Drop:
 
-##########################
-Drag and Drop Problem
-##########################
+##################################
+Drag and Drop Problem (Deprecated)
+##################################
 
 .. note:: EdX offers provisional support for this problem type.
 
@@ -11,6 +11,13 @@ objects to a specific location on an image.
 
 .. image:: ../../../shared/images/DragAndDropProblem.png
  :alt: Image of a drag and drop problem
+
+.. note::
+    This drag and drop problem type has been replaced by a newer
+    drag and drop problem type. The newer drag and drop problem type includes
+    significant improvements and you should use it for any new course
+    development. For more information about the replacement drag and
+    drop problem type, see :ref:`drag_and_drop_problem`.
 
 .. note::
 

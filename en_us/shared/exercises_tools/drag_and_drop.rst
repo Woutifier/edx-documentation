@@ -4,15 +4,17 @@
 Drag and Drop Problem
 ##########################
 
+.. Do we need to add the level of support for this problem type?
+
 In drag and drop problems, learners respond to a question by dragging text or
-objects to a specific location on an image. This section explains how to use
-drag and drop problems in your course.
+images to a specific location on a background image. This section explains how
+to use drag and drop problems in your course.
 
 .. contents::
   :local:
   :depth: 1
 
-.. note:
+.. note::
     This drag and drop problem type is intended as a replacement for an older
     drag and drop problem type. This drag and drop problem type includes
     significant improvements and you should use it for any new course
@@ -26,7 +28,7 @@ Overview of Drag and Drop Problems
 **********************************
 
 A drag and drop problem includes a background image and one or more draggable
-images that learners move into target zones on the background image. You can
+items that learners move into target zones on the background image. You can
 include as many draggable items and as many target zones as you need. You can
 include decoy items that do not have a target and you can include decoy targets
 that do not correspond to draggable items.
@@ -343,7 +345,7 @@ The following table explains the controls in the **Editing** dialog box.
        image in the LMS.
 
    * - ``Display zone borders on the image``
-     - Controls whether the outline of target zones appear on the background
+     - Controls whether the outlines of target zones appear on the background
        image in the LMS.
 
    * - ``Zone borders: Text``
@@ -409,7 +411,7 @@ The following table explains the controls in the **Editing** dialog box.
        :ref:`overview_of_drag_and_drop_problems`.
 
    * - ``Items: Show advanced settings``
-     - Opens additional controls for
+     - Opens additional controls for configuring a draggable item.
 
    * - ``Items: Preferred width``
      - The horizonal size of a draggable item as a percent of the problem
